@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css" href="../../css/styles.css">
+<link rel="stylesheet" th:href="@{/WEB-INF/css/styles.css}"/>
+<head>
+    <meta charset="UTF-8">
+    <title>User profile</title>
+</head>
+
+<body>
+
+<section>
+    <p th:text="${user.getId()} + '.   ' + ${user.getName()} + '   ' +  ${user.getEmail()}">User data</p>
+    <hr>
+<!--    <a th:href="@{/user/{id}/edit(id=${user.getId()})}">Edit</a>-->
+    <div style="display: flex;">
+    <form th:action="@{/users/{id}/edit(id=${user.getId()})}">
+        <input type="submit" value="Edit" style="height:22px; width:80px" />
+    </form>
+    <form th:method="DELETE" th:action="@{/users/{id}(id=${user.getId()})}">
+        <input type="submit" value="Delete" style="height:22px; width:80px" />
+    </form>
+    </div>
+</section>
+
+</body>
+</html>
