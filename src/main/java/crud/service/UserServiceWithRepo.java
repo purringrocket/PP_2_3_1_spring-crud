@@ -44,4 +44,8 @@ public class UserServiceWithRepo {
         userRepository.deleteById(id);
     }
 
+    @Transactional(readOnly = true)
+    public void testCustomQueries() {
+        System.out.println("Testing");
+    }
 }

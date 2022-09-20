@@ -24,6 +24,10 @@ public class UsersController {
     @GetMapping()
     public String index(Model model) {
         model.addAttribute("users", userService.findAll());
+
+        //test
+        userService.testCustomQueries();
+
         return "users/index";
     }
 
