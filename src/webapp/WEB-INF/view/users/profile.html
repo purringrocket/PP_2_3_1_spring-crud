@@ -10,7 +10,9 @@
 <body>
 
 <section>
-    <p th:text="${user.getId()} + '.   ' + ${user.getName()} + '   ' +  ${user.getEmail()}">User data</p>
+    <p th:text="'Id: ' + ${user.getId()}">User id</p>
+    <p th:text="'Name: ' + ${user.getName()}">User name</p>
+    <p th:text="'Email: ' + ${user.getEmail()}">User email</p>
     <hr>
 <!--    <a th:href="@{/user/{id}/edit(id=${user.getId()})}">Edit</a>-->
     <div style="display: flex;">
