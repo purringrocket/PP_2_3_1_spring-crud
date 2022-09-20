@@ -5,11 +5,11 @@ import crud.model.User;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Repository
+@Component
 public class UserDaoHibernateImpl implements UserDao {
 
     @PersistenceContext
